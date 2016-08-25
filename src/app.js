@@ -2,7 +2,6 @@ import 'bootstrap/dist/js/bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../public/assets/main.css';
 
-import jQuery from 'jquery';
 import ReactDOM from 'react-dom';
 import React from 'react';
 
@@ -29,6 +28,4 @@ const app = (
   </Router>
 )
 
-jQuery(function() {
-  ReactDOM.render(app, document.getElementById('coffee-shop'));
-})
+ReactDOM.render(app, document.getElementById('coffee-shop'));
