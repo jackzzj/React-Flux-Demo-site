@@ -1,0 +1,50 @@
+{
+  "name": "coffee-shop",
+  "version": "1.0.0",
+  "description": "A Kaijie Zhan's Coffee Shop.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server"
+  },
+  "author": "Kaijie Zhan <ceres0503@icloud.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ceres0503/portfolio.git"
+  },
+  "keywords": [
+    "babel",
+    "webpack",
+    "es2015"
+  ],
+  "homepage": "https://github.com/ceres0503/portfolio",
+  "devDependencies": {
+    "babel-core": "^6.7.6",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.5.0",
+    "body-parser": "^1.4.3",
+    "bootstrap": "^3.3.7",
+    "classnames": "^2.2.5",
+    "cookie-parser": "^1.3.2",
+    "css-loader": "^0.24.0",
+    "express": "~4.4.1",
+    "file-loader": "^0.9.0",
+    "flux": "^2.1.1",
+    "imports-loader": "^0.6.5",
+    "jquery": "^3.1.0",
+    "json-loader": "^0.5.4",
+    "lodash": "^3.3.0",
+    "raw-loader": "^0.5.1",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "react-hot-loader": "^1.3.0",
+    "react-router": "^2.6.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.0"
+  },
+  "dependencies": {}
+}
