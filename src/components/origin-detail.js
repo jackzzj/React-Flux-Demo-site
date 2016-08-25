@@ -9,7 +9,8 @@ export default class CoffeeDetail extends React.Component {
       coffees: [],
       subscribedCoffeeId: 0
     };
-    CoffeeActions.loadCoffee({coffeeId: this.props.coffeeId, originId: this.props.originId});
+
+    CoffeeActions.loadCoffee({coffeeId: this.props.coffeeId});
     this._onChange = this._onChange.bind(this);
   }
 
@@ -22,22 +23,13 @@ export default class CoffeeDetail extends React.Component {
     CoffeeStore.removeChangeListener(this._onChange);
   }
 
-  componentWillReceiveProps(nextProps) {
-    this._getCoffeeDataIfNeeded(this.props, nextProps);
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   this._getCoffeeDataIfNeeded(nextProps);
+  // }
 
   _onChange() {
     const coffees = CoffeeStore.getAll();
     this.setState({coffees: coffees});
-  }
-
-  _getCoffeeDataIfNeeded(currentProps, nextProps) {
-    console.log(currentProps);
-    console.log(nextProps);
-    if(this.props.coffeeId !== nextProps.coffeeId || this.props.originId !== nextProps.originId) {
-      console.log("nextProps !== currentProps");
-      CoffeeActions.loadCoffee({coffeeId: nextProps.coffeeId, originId: nextProps.originId});
-    }
   }
 
   render() {
