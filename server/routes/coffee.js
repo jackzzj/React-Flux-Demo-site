@@ -12,8 +12,8 @@ module.exports = function(app) {
   });
 
   app.get('/api/coffeeByOrigin/:id', function(req, res) {
-    var coffeeId = parseInt(req.param('id'), 10);
-    res.json(Coffee.get(coffeeId) || {});
+    var originId = parseInt(req.param('id'), 10);
+    res.json(Coffee.getByOriginId(originId) || {});
   });
 
 };

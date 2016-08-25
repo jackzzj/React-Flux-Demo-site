@@ -4,13 +4,13 @@ import CoffeeStore from "../stores/coffee-store";
 import * as CoffeeActions from "../actions/coffee-actions";
 
 export default class CoffeeBox extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       coffees: []
     };
 
-    CoffeeActions.loadCoffee({originId: this.props.originId});
+    CoffeeActions.loadCoffee();
     this._onChange = this._onChange.bind(this);
   }
 

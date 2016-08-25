@@ -40,7 +40,7 @@ export default class OriginSelector extends React.Component {
             <ul className="list-unstyled">
               <li>
                 <small>
-                  {`Search in selected origin: `}
+                  {`Search in origin: `}
                   <input type="text" ref={(input) => this.search = input} onChange={this._handleSearch.bind(this)}/>
                 </small>
               </li>

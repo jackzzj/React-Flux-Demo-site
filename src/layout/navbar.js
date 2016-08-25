@@ -6,7 +6,7 @@ export default class Navbar extends React.Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-default navbar-static-top">
+        <nav className="navbar navbar-inverse navbar-static-top">
           <div id="navbar" className="container">
             <div className="navbar-header">
               <a className="navbar-brand" href="/#/">

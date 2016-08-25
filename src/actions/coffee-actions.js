@@ -14,7 +14,6 @@ export function loadCoffee(coffeeOrigin) {
   });
 
   let coffeeUrl = '/api/coffee';
-
   if (coffeeOrigin === undefined) {// no params
     coffeeUrl = '/api/coffee';
   }else if(coffeeOrigin.coffeeId !== undefined && coffeeOrigin.originId === undefined) { //search by coffeeId
@@ -22,7 +21,6 @@ export function loadCoffee(coffeeOrigin) {
   }else if(coffeeOrigin.coffeeId === undefined && coffeeOrigin.originId !== undefined) { //search by originId
     coffeeUrl = '/api/coffeeByOrigin/' + coffeeOrigin.originId;
   }
-  console.log(coffeeUrl);
 
   jQuery.ajax({
     method: 'GET',

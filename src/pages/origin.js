@@ -1,10 +1,10 @@
 import React from 'react';
-import CoffeeBox from "../components/coffee-box";
+import CoffeeDetail from "../components/coffee-detail";
 
 export default class OriginPage extends React.Component {
   render() {
     return (
-      <CoffeeBox></CoffeeBox>
+      <CoffeeDetail originId={this.props.params.originId}></CoffeeDetail>
     )
   }
 }

@@ -21,10 +21,9 @@ const app = (
     <Redirect from="/" to="/index"/>
     <Route path="/" component={Navbar}>
       <Route path="/index" component={IndexPage}/>
-      <Route path="/coffee/:coffeeId" component={CoffeePage}>
-        <Route path="/origin/:originId" component={OriginPage}/>
-      </Route>
-      <Route path="/subscription" component={SubscriptionPage}/>
+      <Route path="/coffee/:coffeeId" component={CoffeePage}/>
+      <Route path="/origin/:originId" component={OriginPage}/>
+      <Route path="/subscription/:coffeeId" component={SubscriptionPage}/>
       <Route path="*" component={NoMatch}/>
     </Route>
   </Router>
