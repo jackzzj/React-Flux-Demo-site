@@ -7,15 +7,21 @@ class OriginStore extends EventEmitter {
   constructor() {
     super();
     this.origins = [];
+    this.selectedOrigin = {};
   }
 
   loadOrigin(origins) {
-    if (origins.constructor === Object) {
-      this.origins.push(origins);
-    } else {
-      this.origins = origins;
-    }
+    this.origins = origins;
     this.emitChange();
+  }
+
+  loadOriginDetail(origin) {
+    this.selectedOrigin = origin;
+    this.emitChange();
+  }
+
+  getOriginDetail() {
+    return this.selectedOrigin;
   }
 
   getAll() {
@@ -33,7 +39,12 @@ class OriginStore extends EventEmitter {
         {
           this.loadOrigin(action.origins);
         }
-        break;
+      break;
+      case "RECEIVE_SELECTED_ORIGIN":
+        {
+          this.loadOriginDetail(action.origin);
+        }
+      break;
     }
   }
 

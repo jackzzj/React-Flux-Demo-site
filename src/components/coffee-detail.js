@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 import CoffeeStore from "../stores/coffee-store";
 import * as CoffeeActions from "../actions/coffee-actions";
 
@@ -6,8 +7,7 @@ export default class CoffeeDetail extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      coffees: [],
-      subscribedCoffeeId: 0
+      coffees: []
     };
     CoffeeActions.loadCoffee({coffeeId: this.props.coffeeId, originId: this.props.originId});
     this._onChange = this._onChange.bind(this);
@@ -32,19 +32,12 @@ export default class CoffeeDetail extends React.Component {
   }
 
   _getCoffeeDataIfNeeded(currentProps, nextProps) {
-    console.log(currentProps);
-    console.log(nextProps);
     if(this.props.coffeeId !== nextProps.coffeeId || this.props.originId !== nextProps.originId) {
-      console.log("nextProps !== currentProps");
       CoffeeActions.loadCoffee({coffeeId: nextProps.coffeeId, originId: nextProps.originId});
     }
   }
 
   render() {
-    // const {coffees} = this.state;
-    // if (coffees.length) {
-    //   const coffee = coffees[0];
-    //
     const {coffees} = this.state;
     if (coffees) {
       return (
@@ -61,7 +54,7 @@ export default class CoffeeDetail extends React.Component {
                 </p>
                 <p className="text-left">{coffee.description}</p>
                 <p>
-                  <a className="btn btn-primary" href="#" role="button" onClick={this._handleSubscribe.bind(this, coffee)}>Subscribe Me!</a>
+                  <Link className="btn btn-primary" to={`/subscriptions/${coffee.id}`}>Subscribe Me!</Link>
                 </p>
               </div>
             </div>
@@ -71,10 +64,5 @@ export default class CoffeeDetail extends React.Component {
     } else {
       return <div>Loading...</div>;
     }
-  }
-
-  _handleSubscribe(coffee, event) {
-    event.preventDefault();
-    this.setState({subscribedCoffeeId: coffee.id});
   }
 }

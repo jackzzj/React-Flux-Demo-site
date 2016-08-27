@@ -11,7 +11,7 @@ var coffees = [{
   ]
 }, {
   "id": 2,
-  "originId": 2,
+  "originId": 8,
   "description": "Marcala is a region in the west central area that is known for some of the highest quality coffees from Honduras. This Marcala is grown by COCOSAM (Cooperativa Cafetelera Sanmarquena) in the San Marcos de Colon area, and it is partly the group efforts of the Cooperative Members to improve the processing and drying of the beans that really make this coffee stand out. Fair Trade prices have helped the coffee growers in this region dramatically improve the quality of their coffee, through investments in infrastructure and education. This is a light and mild coffee, very sweet with hints of vanilla, accented by clean apple butter fruit notes and almond flavors in lighter roasts. With a darker roast there is a deeper cocoa taste with nutty tones. Medium Roast provides flavors of baking chocolate, dark berry, cedar and walnut with a bittersweet chocolate finish. Medium-Dark becomes more complex bringing in notes of buttered toast, raisins and dates. City - Full City Roasts emphasize dark sugar flavors, roasted nut and provide tannic acidity similar to black tea.",
   "name": "Honduras Marcala",
   "image": [
@@ -100,12 +100,12 @@ var buildCoffees = function() {
 module.exports = {
   get: function(id) {
     return _.find(buildCoffees(), function(coffee) {
-      return coffee.id === id;
+      return coffee.id == id;
     });
   },
   getByOriginId: function (originId) {
     return _.filter(buildCoffees(), function(coffee) {
-      return coffee.origin.id === originId;
+      return coffee.origin.id == originId;
     });
   },
   all: function() {

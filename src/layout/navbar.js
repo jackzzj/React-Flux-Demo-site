@@ -32,7 +32,7 @@ export default class Navbar extends React.Component {
 
               </li>
               <li>
-                <Link to="/subscription">Subscriptions</Link>
+                <Link to="/subscriptions/0">Subscriptions</Link>
               </li>
               <li>
                 <a href data-toggle="dropdown">

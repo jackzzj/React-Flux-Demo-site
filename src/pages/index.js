@@ -22,7 +22,7 @@ export default class IndexPage extends React.Component {
 
         <ImageSlide></ImageSlide>
 
-        <div id="main" className="row">
+        <div id="coffee-box" className="row">
           <div id="origin" className="col-md-3 col-xs-12">
 
             <OriginSelector></OriginSelector>

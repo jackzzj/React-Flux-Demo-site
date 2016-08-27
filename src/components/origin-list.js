@@ -7,8 +7,7 @@ export default class OriginList extends React.Component {
   constructor() {
     super();
     this.state = {
-      origins: [],
-      selected: 0
+      origins: []
     };
 
     OriginActions.loadOrigin();

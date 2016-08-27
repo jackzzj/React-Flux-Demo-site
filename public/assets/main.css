@@ -3,6 +3,7 @@
 /*background: #6ba2aa
 form: #9ecbd2
 button: #fce87c*/
+
 body {
   font-family: 'Space Mono', monospace;
   background: #e9ebee;
@@ -10,32 +11,46 @@ body {
 p {
   font-family: 'Work Sans', sans-serif;
 }
-Link:hover,
-Link:focus,
-a:hover,
-a:focus {
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+#content {
+  min-height: 100%;
+  position: relative;
+}
+#main {
+  min-height: 100%;
+  padding: 10px;
+  padding-bottom: 200px;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  padding: 10px 0;
+  width: 100%;
+  color: #999999;
+  background-color: #222222;
+}
+Link:hover, Link:focus, a:hover, a:focus {
   color: white;
   text-decoration: none;
   background-color: #222222;
 }
-Link:focus,
-a:focus {
+Link:focus, a:focus {
   outline: thin dotted #333;
   outline: 5px auto;
   outline-offset: -2px;
 }
 #coffee-detail {
-  margin-bottom: 400px
+  padding-bottom: 330px
 }
-#coffee-detail .row{
-  margin-bottom: 50px
+#coffee-detail .row {
+  padding-bottom: 50px
 }
 #coffee-detail-info {
   background: #FFF;
-}
-.footer {
-  color: #999999;
-  background-color: #222222;
 }
 .active {
   color: white;
@@ -54,9 +69,9 @@ a:focus {
 .sort-menu h2 {
   margin-top: 0px;
 }
-#main {
-  margin-top: 100px;
-  margin-bottom: 100px;
+#coffee-box {
+  padding-top: 100px;
+  padding-bottom: 330px;
 }
 #origin {
   margin-bottom: 50px;
@@ -68,7 +83,7 @@ a:focus {
 #search {
   padding-left: 0;
 }
-#search ul{
+#search ul {
   padding-left: 0;
 }
 #search li {
@@ -77,8 +92,40 @@ a:focus {
 #search a {
   padding-bottom: 10px;
 }
+#subscription-list,
+#subscription-page {
+  padding-bottom: 330px;
+}
+#subscription-info {
+  color: white;
+  background-color: #999999;
+  padding: 0;
+  margin: 20px;
+}
+
+#subscription-user,
+#subscription-coffee {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#subscription-coffee img {
+  width: 100px;
+  height: 100px;
+}
+#helpBlock {
+  color: red;
+}
+hr {
+  background-color: black;
+  height: 2px;
+  width: 90%;
+}
 .btn {
+  color: white;
   background-color: #222222;
+}
+form {
+  padding: 50px;
 }
 .open> .dropdown-menu {
   -webkit-transform: scale(1, 1);
