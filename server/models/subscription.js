@@ -1,6 +1,6 @@
 var _ = require('lodash');
-var Coffee = require('./coffee')
-var Origin = require('./origin')
+var Coffee = require('./coffee');
+var Origin = require('./origin');
 var subscriptions = [
   {"id":1 ,"userName": "Jack", "coffeeId": 2, "email": "abc@icloud.com", "phone": "639-000-1234", "startDate": "2016-08-27T06:15:47.972Z", "months": 6, "quantityPerMonth": 2},
   {"id":2 ,"userName": "Aderson", "coffeeId": 3, "email": "abc@icloud.com", "phone" : "639-111-1234", "startDate": "2016-08-27T06:15:47.972Z", "months": 12, "quantityPerMonth": 1},
